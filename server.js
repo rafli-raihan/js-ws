@@ -3,7 +3,10 @@ const http = require('http');
 const requestListener = (request, response) => {
     
     const { method, url } = request; // ini buat url routing
-    response.setHeader('Content-Type', 'application/json');
+    /*setHeader ini bwt ganti tipe data yg dikirim ke header, cek tipe2 nya disini:
+    https://developer.mozilla.org/en-US/docs/Web/HTTP/MIME_types/Common_types */
+    response.setHeader('Content-Type', 'text/html'); 
+
     response.setHeader('Powered-By', 'Node.js');
  
     switch (url) {

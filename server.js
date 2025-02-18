@@ -78,9 +78,9 @@ const requestListener = (request, response) => {
 
         default:
             response.statusCode = 404;
-            response.end(
-                `<h1>${response.statusCode} Not Found! ;emote_sedih;</h1>\n\n<p>Ini page/route nya tidak ditemukan wak...</p>`
-            );
+            response.end(JSON.stringify({
+                message: 'Halaman tidak ditemukan!',
+            }));
         break;
     }
 };
